@@ -1,0 +1,9 @@
+// Comment   
+import Ownership
+
+
+Application_Role:
+    'Application_Role'
+        properties*=Property
+        owner*=Owner
+;

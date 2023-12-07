@@ -1,0 +1,9 @@
+// Comment   
+import Ownership
+
+
+Application_Component:
+    'Application_Component'
+        properties*=Property
+        owner*=Owner
+;

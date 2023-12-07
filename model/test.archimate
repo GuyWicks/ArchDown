@@ -1,0 +1,17 @@
+/* 
+    comment
+*/
+
+// comment
+
+
+GET_product is a Application_Interface
+    owned by Guy
+
+Product is a Application_Component
+    this should not pass the grammar
+
+Dave is a Application_Role
+
+ABC is a team
+

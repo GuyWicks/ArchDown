@@ -1,0 +1,16 @@
+import Application.ApplicationInterface
+import Application.ApplicationComponent
+import Application.ApplicationRole
+
+
+Model: 
+    commands*=Assignment;
+
+Assignment:
+    name=ID 'is' 'a' type*=Application_Interface|Application_Component|Application_Role
+;
+
+
+Comment:
+  (/\/\/.*$/)|(/\/\*(.|\n)*?\*\//)
+;

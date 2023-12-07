@@ -1,2 +1,3 @@
-textX
+textX[cli]
 pixie-python
+icecream

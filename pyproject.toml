@@ -1,0 +1,6 @@
+[tool.ruff]
+exclude = [".pyi"]
+respect-gitignore = true
+
+[tool.ruff.lint]
+ignore = ["F401"]

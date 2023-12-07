@@ -1,0 +1,10 @@
+// Comment   
+import Ownership
+
+
+Application_Interface:
+    'Application_Interface'
+        owner+=Owner
+//        properties+=Property
+;
+

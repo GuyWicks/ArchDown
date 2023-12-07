@@ -1,0 +1,28 @@
+
+
+Property:
+    pname=ID 'has' ptype=ID
+;
+Team:
+    name=ID 'is' 'a' 'team'
+;
+
+Owner:
+    'owned' 'by' owner=Individual|Group
+;
+
+Managed:
+    'managed' owner=Individual|Group
+;
+
+Supported:
+    'supported' owner=Group
+;
+
+Individual:
+    name=/(.)*/
+;
+
+Group:
+    name=/(.)*/
+;
