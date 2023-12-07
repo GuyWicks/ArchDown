@@ -1,0 +1,6 @@
+external
+output
+bin
+__pycache__
+*.pyi
+.pytest_cache
