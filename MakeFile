@@ -1,0 +1,15 @@
+venv=${VIRTUAL_ENV}
+python=${venv}/Scripts/python.exe
+
+install:
+	pip install -r requirements.txt
+
+check:
+	textx check grammar/archimate.tx
+
+generate:
+	textx generate grammar/archimate.tx --target dot
+	bin/dot -Tpng grammar/archimate.dot > archimate.png
+
+test: check generate
+	${python} c:/Users/wicksg/Development/ArchDown/ArchDown.py	
