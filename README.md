@@ -23,7 +23,7 @@ Finance_Department is a Business_Role
 
 Visualisation: _not correct yet!_
 
-![img](output/test_application_component.png)
+![img](example_ArchiShape_application)
 ## ToDo
 - [ ] Make it work!
 - [x] Develop proto-language model with textX
@@ -32,3 +32,14 @@ Visualisation: _not correct yet!_
 - [ ] Develop a 'heirarchy' of concepts
 - [ ] Build lines
 - [ ] Build line routing algo
+- [ ] Review pixie vs native SVG
+
+## Idea's
+- Use 'weight' (vertical) and 'attraction' (horiz) to layout concepts
+- Business are lighter, technology is heavier
+- Interfaces are lighter than components
+- Composed components add weight
+- Simplify the Archi model
+- Services are light
+- Collaboration increases attraction 
+

@@ -1,3 +1,4 @@
 textX[cli]
 pixie-python
 icecream
+pytest

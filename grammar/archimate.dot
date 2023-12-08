@@ -11,41 +11,28 @@
     edge[dir=black,arrowtail=empty]
 
 
-1824762154000[ label="{Model|}"]
+4746681824[ label="{Model|}"]
 
-1824762161808[ label="{Assignment|name: ID\l}"]
+4746683776[ label="{*Assignment|}"]
 
-1824762149120[ label="{Application_Interface|}"]
+4746686496[ label="{Owned|name: ID\ltype: ID\l}"]
 
-1824762150096[ label="{Application_Component|}"]
-
-1824762152048[ label="{Application_Role|}"]
+4746689216[ label="{Assigned|name: ID\ltype: ID\l}"]
 
 
 
-1824762154000 -> 1824762161808[arrowtail=diamond, dir=both, headlabel="commands 0..*"]
-1824762161808 -> 1824762149120[arrowtail=diamond, dir=both, headlabel="type "]
-1824762149120 -> 1824762145216[arrowtail=diamond, dir=both, headlabel="properties 0..*"]
-1824762145216[ label="{Property|pname: ID\lptype: ID\l}"]
-
-1824762149120 -> 1824762147168[arrowtail=diamond, dir=both, headlabel="owner 0..*"]
-1824762147168[ label="{Owner|}"]
-
-1824762150096 -> 1824762145216[arrowtail=diamond, dir=both, headlabel="properties 0..*"]
-1824762145216[ label="{Property|pname: ID\lptype: ID\l}"]
-
-1824762150096 -> 1824762147168[arrowtail=diamond, dir=both, headlabel="owner 0..*"]
-1824762147168[ label="{Owner|}"]
-
-1824762152048 -> 1824762145216[arrowtail=diamond, dir=both, headlabel="properties 0..*"]
-1824762145216[ label="{Property|pname: ID\lptype: ID\l}"]
-
-1824762152048 -> 1824762147168[arrowtail=diamond, dir=both, headlabel="owner 0..*"]
-1824762147168[ label="{Owner|}"]
-
+4746681824 -> 4746683776[arrowtail=diamond, dir=both, headlabel="assignment 0..*"]
+4746683776 -> 4746686496 [dir=back]
+4746683776 -> 4746689216 [dir=back]
 match_rules [ shape=plaintext, label=< <table>
 	<tr>
-		<td><b>Comment</b></td><td>\/\*(.|\n)*?\*\/</td>
+		<td><b>Comment</b></td><td></td>
+	</tr>
+	<tr>
+		<td><b>CommentBlock</b></td><td>\/\*(.|\n)*?\*\/</td>
+	</tr>
+	<tr>
+		<td><b>CommentLine</b></td><td>\/\/.*?$</td>
 	</tr>
 </table> >]
 

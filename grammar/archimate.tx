@@ -1,16 +1,34 @@
-import Application.ApplicationInterface
-import Application.ApplicationComponent
-import Application.ApplicationRole
+// import Application.ApplicationInterface
+// import Application.ApplicationComponent
+// import Application.ApplicationRole
+import Comment
 
+Model:
+  (specialise+=Specialisation)*
+  (assignment+=Assignment)*
+;
 
-Model: 
-    commands*=Assignment;
+Specialisation:
+  Specialised
+;
+
+Specialised:
+  child=ID 'specialisation' parent=ID
+;
 
 Assignment:
-    name=ID 'is' 'a' type*=Application_Interface|Application_Component|Application_Role
+  Assigned
 ;
 
 
-Comment:
-  (/\/\/.*$/)|(/\/\*(.|\n)*?\*\//)
+Assigned:
+  name=ID 'is' 'a' type=Concept
 ;
+
+Concept:
+  'Application_Interface' |
+  'Application_Component' |
+  'Application_Role' |
+  'Team'
+;
+

@@ -1,0 +1,7 @@
+Model: customers+=Customer* computers+=Computer* owns+=Own*;
+Computer: 'computer' name=ID;
+Customer: 'customer' name=ID;
+Own: 'the' computer=[Computer] 
+     'is' 'owned' 'by' customer=[Customer] 
+     'since' date=STRING;
+     

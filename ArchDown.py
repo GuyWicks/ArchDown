@@ -3,8 +3,16 @@ from textx import (
     get_children_of_type,
     metamodel_from_file,
 )
+from pprint import pprint as pp
 
-mm = metamodel_from_file("./grammar/archimate.tx")
+
+class Assignment:
+    def __init__(self, parent, name):  # remember to include parent param.
+        self.parent = parent
+        self.name = name
+
+
+mm = metamodel_from_file("./grammar/archimate.tx", classes=[Assignment])
 model = mm.model_from_file("./model/test.archimate")
 
 # At this point model is a plain Python object graph with instances of
@@ -13,16 +21,3 @@ model = mm.model_from_file("./model/test.archimate")
 
 def cname(o):
     return o.__class__.__name__
-
-
-# Let's interpret the model
-for command in model.commands:
-    match cname(command):
-        case "Assignment":
-            print(command.name, "is a", command.type)
-            ic(command.type)
-
-        case _:
-            print("OTHER", cname(command))
-
-ic(model.commands)
